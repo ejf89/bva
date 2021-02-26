@@ -1,0 +1,96 @@
+{% assign settings = section.settings %}
+
+{% case settings.hero_text_alignment %}
+  {% when 'left' %}
+      {% assign text_align = 'align-left' %}
+  {% when 'center' %}
+    {% assign text_align = 'align-center' %}
+  {% when 'right' %}
+    {% assign text_align = 'align-right' %}
+{% endcase %}
+
+<div class="hero-container">
+  <div class="hero" role="img" aria-label="{{settings.home_page_hero_desktop_image.alt}}">
+    <div class="hero__copy-container {{text_align}}">
+      <h1 class="hero__title">{{settings.hero_headline}}</h1>
+      <p class="hero__copy">{{settings.hero_copy}}</p>
+        <a
+        href="{{settings.home_page_hero_cta_button_link}}"
+        class="hero__cta">
+        {{settings.home_page_hero_cta_button_text}}
+      </a>
+
+    </div>
+  </div>
+</div>
+ <style media="screen">
+
+   .hero{
+     background-image: url({{  settings.hero_desktop_image  | img_url: 'master' }});
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero{
+        background-image: url({{  settings.hero_mobile_image  | img_url: 'master' }});
+       }
+
+    }
+ </style>
+
+{% schema %}
+  {
+    "name": "Home Page Hero",
+    "settings": [
+      {
+        "type": "image_picker",
+		    "id": "hero_desktop_image",
+  		  "label": "Home Page Hero Desktop Image"
+      },
+      {
+        "type": "image_picker",
+  		  "id": "hero_mobile_image",
+  		  "label": "Home Page Hero Mobile Image"
+	    },
+      {
+        "type": "text",
+        "id": "hero_headline",
+        "label": "Main Headline",
+        "default": "Section title"
+      },
+      {
+        "type": "text",
+        "id": "hero_copy",
+        "label": "Main Copy",
+        "default": "Section title"
+      },
+      {
+        "type": "select",
+		    "id": "hero_text_alignment",
+        "label": "Text Alignment",
+        "default": "center",
+        "options": [
+        {"value": "left", "label": "Left"},
+          {"value": "center", "label": "Center"},
+          {"value": "right", "label": "Right"}
+        ]
+      },
+      {
+        "type": "text",
+        "id": "home_page_hero_cta_button_text",
+        "label": "Hero CTA Button Text ",
+        "default": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "home_page_hero_cta_button_link",
+        "label": "Hero CTA Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Page Hero",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

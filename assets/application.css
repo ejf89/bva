@@ -1,0 +1,58 @@
+@import "styles.css";
+/*
+body{
+  margin: 0;
+}
+h1, p, a{
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-container{
+  height: 50vh;
+  display: flex;
+}
+
+.hero{
+  width: 100%;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.hero__copy-container{
+  text-align: left;
+  margin: auto;
+    @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 812px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+      border: 2px solid red;
+  }
+}
+.hero__copy-container.align-left{
+  grid-column: 1;
+
+}
+.hero__copy-container.align-center{
+  grid-column: 1 / span 2;
+  text-align: center;
+  max-width: 50%;
+}
+.hero__copy-container.align-right{
+  grid-column: 2;
+}
+
+.hero__cta{
+  text-decoration: none;
+  background-color: #57AD68;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 20px;
+  transition:all .2s ease-in-out;
+}
+.hero__cta:hover{
+  background-color: #FFFFFF;
+  color: #57AD68;
+  transition: 0.3s;
+} */
