@@ -75,9 +75,11 @@ h1, p, a{
 .hero__copy{
   font-weight: 300;
   line-height: 32px;
+  font-size: 24px;
   @include media-query($small){
     margin: auto;
     max-width: 85%;
+    font-size: 18px;
   };
 }
 

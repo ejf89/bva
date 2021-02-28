@@ -67,11 +67,13 @@ h1, p, a {
 
 .hero__copy {
   font-weight: 300;
-  line-height: 32px; }
+  line-height: 32px;
+  font-size: 24px; }
   @media only screen and (max-width: 767px) {
     .hero__copy {
       margin: auto;
-      max-width: 85%; } }
+      max-width: 85%;
+      font-size: 18px; } }
 
 .hero__cta {
   text-decoration: none;
